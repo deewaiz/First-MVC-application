@@ -9,7 +9,7 @@
 import Foundation
 
 class ModelController {
-    var quote = Quote(
+    var quote = QuoteModel(
         text: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
         author: "Albert Einstein"
     )

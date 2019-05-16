@@ -9,14 +9,14 @@
 import UIKit
 
 class EditQuoteViewController: UIViewController {
-    // MARK - Outlets
+    // MARK: - Outlets
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorTextField: UITextField!
     
-    // MARK - Model
+    // MARK: - Model
     var modelController: ModelController!
     
-    // MARK - ViewController logic
+    // MARK: - ViewController logic
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,14 +25,10 @@ class EditQuoteViewController: UIViewController {
         authorTextField.text = quote.author
     }
     
-    // MARK - Actions
+    // MARK: - Navigation
     @IBAction func saveAction(_ sender: Any) {
-        let newQuote = Quote(text: quoteLabel.text!, author: authorTextField.text!)
+        let newQuote = QuoteModel(text: quoteLabel.text!, author: authorTextField.text!)
         modelController.quote = newQuote
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-
 }

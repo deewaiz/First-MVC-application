@@ -25,6 +25,7 @@ class QuoteViewController: UIViewController {
         authorLabel.text = quote.author
     }
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let editViewController = segue.destination as? EditQuoteViewController {
             editViewController.modelController = modelController
