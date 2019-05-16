@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quote View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="QuoteViewController" customModule="First_MVC_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olP-8b-YSE">
+                                <rect key="frame" x="16" y="20" width="343" height="20.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Quote">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQA-2g-5Zj">
+                                <rect key="frame" x="179" y="48.5" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACz-cy-WGf">
+                                <rect key="frame" x="152" y="77.5" width="70" height="30"/>
+                                <state key="normal" title="Edit quote"/>
+                                <connections>
+                                    <segue destination="vY9-J0-q5i" kind="presentation" id="zTj-9T-RnW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dQA-2g-5Zj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="179" id="027-wc-AA4"/>
+                            <constraint firstItem="olP-8b-YSE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3c7-cc-vxB"/>
+                            <constraint firstItem="dQA-2g-5Zj" firstAttribute="top" secondItem="olP-8b-YSE" secondAttribute="bottom" constant="8" id="8VL-xQ-g4g"/>
+                            <constraint firstItem="dQA-2g-5Zj" firstAttribute="top" secondItem="olP-8b-YSE" secondAttribute="bottom" constant="8" id="Har-Sn-QPT"/>
+                            <constraint firstItem="olP-8b-YSE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JMe-1a-ubv"/>
+                            <constraint firstItem="ACz-cy-WGf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="WAC-9u-t6a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dQA-2g-5Zj" secondAttribute="trailing" constant="16" id="bmb-L0-8mJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ACz-cy-WGf" secondAttribute="trailing" symbolic="YES" id="i4Z-rL-WOG"/>
+                            <constraint firstItem="ACz-cy-WGf" firstAttribute="top" secondItem="dQA-2g-5Zj" secondAttribute="bottom" constant="8" id="lta-Xf-jfC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dQA-2g-5Zj" secondAttribute="trailing" constant="16" id="n98-Yt-tkj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="olP-8b-YSE" secondAttribute="trailing" constant="16" id="skf-rX-6u0"/>
+                            <constraint firstItem="dQA-2g-5Zj" firstAttribute="top" secondItem="olP-8b-YSE" secondAttribute="bottom" constant="8" id="w0I-E9-jPU"/>
+                            <constraint firstItem="dQA-2g-5Zj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="179" id="zDk-25-EOR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="dQA-2g-5Zj" id="f0F-5n-ZMZ"/>
+                        <outlet property="quoteLabel" destination="olP-8b-YSE" id="CJ4-HZ-Dk9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184.80000000000001" y="45.42728635682159"/>
+        </scene>
+        <!--Edit Quote View Controller-->
+        <scene sceneID="4fB-yP-8E1">
+            <objects>
+                <viewController id="vY9-J0-q5i" customClass="EditQuoteViewController" customModule="First_MVC_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MOV-36-mNg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcr-dO-ink">
+                                <rect key="frame" x="16" y="20" width="343" height="20.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="authorTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vBv-q8-Gr2">
+                                <rect key="frame" x="16" y="48.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="saveButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41X-Zv-xab">
+                                <rect key="frame" x="176" y="86.5" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveAction:" destination="vY9-J0-q5i" eventType="touchUpInside" id="h9t-pe-L2D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="41X-Zv-xab" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Wmr-A0-EfC" secondAttribute="leading" id="4kI-Qy-maN"/>
+                            <constraint firstItem="41X-Zv-xab" firstAttribute="top" secondItem="vBv-q8-Gr2" secondAttribute="bottom" constant="8" id="7HT-iy-6yn"/>
+                            <constraint firstItem="Wmr-A0-EfC" firstAttribute="trailing" secondItem="vBv-q8-Gr2" secondAttribute="trailing" constant="16" id="CoZ-Pe-Pwp"/>
+                            <constraint firstItem="41X-Zv-xab" firstAttribute="top" secondItem="vBv-q8-Gr2" secondAttribute="bottom" constant="8" id="JWN-9X-xgK"/>
+                            <constraint firstItem="Wmr-A0-EfC" firstAttribute="trailing" secondItem="41X-Zv-xab" secondAttribute="trailing" constant="165" id="S1T-Dp-yyc"/>
+                            <constraint firstItem="bcr-dO-ink" firstAttribute="leading" secondItem="Wmr-A0-EfC" secondAttribute="leading" constant="16" id="SPs-Tl-jTw"/>
+                            <constraint firstItem="vBv-q8-Gr2" firstAttribute="leading" secondItem="Wmr-A0-EfC" secondAttribute="leading" constant="16" id="eLB-pt-R6V"/>
+                            <constraint firstItem="bcr-dO-ink" firstAttribute="top" secondItem="Wmr-A0-EfC" secondAttribute="top" id="fDx-CW-ewI"/>
+                            <constraint firstItem="vBv-q8-Gr2" firstAttribute="top" secondItem="bcr-dO-ink" secondAttribute="bottom" constant="8" id="h5t-q1-tGM"/>
+                            <constraint firstItem="Wmr-A0-EfC" firstAttribute="trailing" secondItem="bcr-dO-ink" secondAttribute="trailing" constant="16" id="sH4-G5-lmS"/>
+                            <constraint firstItem="vBv-q8-Gr2" firstAttribute="top" secondItem="bcr-dO-ink" secondAttribute="bottom" constant="8" id="vbZ-jx-vcN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wmr-A0-EfC"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorTextField" destination="vBv-q8-Gr2" id="KOT-nf-itx"/>
+                        <outlet property="quoteLabel" destination="bcr-dO-ink" id="Zfp-HS-QEn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uzw-z5-QHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="45"/>
+        </scene>
+    </scenes>
+</document>

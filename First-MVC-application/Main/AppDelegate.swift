@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Инициализируем корневой контроллер вида и передаем ему модель
+        if let quoteViewController = window?.rootViewController as? QuoteViewController {
+            quoteViewController.modelController = ModelController()
+        }
         return true
     }
 
